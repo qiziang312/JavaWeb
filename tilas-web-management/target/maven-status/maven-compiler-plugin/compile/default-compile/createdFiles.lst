@@ -1,0 +1,7 @@
+com\qza\pojo\Result.class
+com\qza\service\DeptService.class
+com\qza\mapper\deptMapper.class
+com\qza\TilasWebManagementApplication.class
+com\qza\controller\DeptController.class
+com\qza\service\impl\DeptServiceImpl.class
+com\qza\pojo\Dept.class
