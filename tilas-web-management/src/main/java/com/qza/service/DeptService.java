@@ -1,7 +1,7 @@
 package com.qza.service;
 
 import com.qza.pojo.Dept;
-import org.apache.ibatis.annotations.Select;
+//import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 

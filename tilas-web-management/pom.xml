@@ -28,6 +28,8 @@
     </scm>
     <properties>
         <java.version>17</java.version>
+        <!-- 1.18.34 (Spring Boot 3.3.5 default) breaks on JDK 24+ because TypeTag.UNKNOWN was removed -->
+        <lombok.version>1.18.46</lombok.version>
     </properties>
     <dependencies>
         <dependency>
