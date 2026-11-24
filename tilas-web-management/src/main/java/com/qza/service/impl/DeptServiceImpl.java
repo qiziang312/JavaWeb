@@ -1,6 +1,7 @@
 package com.qza.service.impl;
 
-import com.qza.mapper.deptMapper;
+import com.qza.mapper.DeptMapper;
+
 import com.qza.pojo.Dept;
 import com.qza.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import java.util.List;
 public class DeptServiceImpl implements DeptService
 {
     @Autowired
-    private deptMapper deptMapper;
+    private DeptMapper deptMapper;
 
     //查寻所有部门
     @Override

@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Update;
 import java.util.List;
 
 @Mapper
-public interface deptMapper
+public interface DeptMapper
 {
     //查询所有部门
     @Select("SELECT id, name, create_time, update_time FROM dept order by update_time desc")

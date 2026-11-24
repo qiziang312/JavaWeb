@@ -1,15 +1,66 @@
 spring:
   application:
     name: springboot-mybatis-quickstart
-  #数据库的连接信息
+
+  # ---- 环境切换 ----
+  #profiles:
+    #active: dev                    # 激活 application-dev.yml
+
+  #---- 数据源 ----
   datasource:
     url: jdbc:mysql://localhost:3306/tlias?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
+    # ---- 连接池高级配置（HikariCP）----
+     #hikari:
+      #minimum-idle: 5               # 最小空闲连接数
+      #maximum-pool-size: 20         # 最大连接数（默认10）
+      #connection-timeout: 30000     # 获取连接超时（毫秒）
+      #idle-timeout: 600000          # 空闲连接存活时间
+      #max-lifetime: 1800000         # 连接最大生命周期
+
+  # ---- MVC 相关 ----
+  #mvc:
+    #static-path-pattern: /static/**  # 静态资源路径
+    #format:
+      #date: yyyy-MM-dd               # 全局日期格式
+
+  # ---- 文件上传 ----
+  #servlet:
+    #multipart:
+      #max-file-size: 10MB            # 单文件最大
+        #max-request-size: 100MB      # 请求总大小最大
+
+  # ---- 热部署 ----
+  #devtools:
+    #restart:
+      #enabled: true
+
+  # ---- 服务器 ----
+  #server:
+    #port: 8081                        # 改端口（默认8080）
+    #servlet:
+      #context-path: /api              # 统一路径前缀
 
 #Mybatis的相关配置
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #mapper-locations: classpath:mapper/*.xml    # XML映射文件位置（用注解SQL则不需要）
+    #type-aliases-package: com.qza.pojo          # 别名扫描（XML里写Dept代替全类名）
+
+# ---- 日志 ----
+#logging:
+  #level:
+    #root: info               # 全局日志级别
+    #com.qza: debug           # 本项目包开debug（只打自己代码的日志）
+  #file:
+    #name: logs/app.log       # 日志文件路径
+  #pattern:
+    #console: "%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+# ---- 自定义业务属性（配合 @Value / @ConfigurationProperties）----
+#app:
+  #upload-path: D:/uploads    # 自定义属性，用 @Value("${app.upload-path}") 读取
