@@ -1566,3 +1566,5 @@ Unconditional classes:
 2026-11-24 11:31:19.505 [http-nio-8080-exec-10] INFO  com.qza.controller.DeptController - 查询全部部门数据
 2026-11-24 11:34:48.708 [http-nio-8080-exec-4] INFO  com.qza.controller.DeptController - 根据ID删除部门6
 2026-11-24 11:34:56.611 [http-nio-8080-exec-1] INFO  com.qza.controller.DeptController - 查询全部部门数据
+2026-11-24 12:36:38.018 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-11-24 12:36:38.071 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
