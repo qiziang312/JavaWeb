@@ -10,28 +10,33 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
-public class DeptServiceImpl implements DeptService {
+public class DeptServiceImpl implements DeptService
+{
     @Autowired
     private deptMapper deptMapper;
 
+    //查寻所有部门
     @Override
     public List<Dept> findAll()
     {
         return deptMapper.findAll();
     }
 
+    //根据id查询部门
     @Override
     public Dept getById(Integer id)
     {
         return deptMapper.getById(id);
     }
 
+    //根据id删除部门
     @Override
     public void delete(Integer id)
     {
         deptMapper.delete(id);
     }
 
+    //添加部门
     @Override
     public void add(Dept dept)
     {
@@ -43,6 +48,7 @@ public class DeptServiceImpl implements DeptService {
         deptMapper.insert(dept);
     }
 
+    //修改部门
     @Override
     public void update(Dept dept)
     {
